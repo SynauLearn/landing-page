@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Pick a lesson",
+        "description": "Choose a topic and start learning for free"
+    },
+    {
+        "id": 2,
+        "title": "Answer quizzes",
+        "description": "Flashcards + short quizzes to lock in understanding"
+    },
+    {
+        "id": 3,
+        "title": "Earn XP & level up",
+        "description": "Collect XP, build streaks, and climb the leaderboard"
+    },
+    {
+        "id": 4,
+        "title": "Mint your badge",
+        "description": "Turn your progress into on-chain proof, whenever you’re ready"
+    }
+]
