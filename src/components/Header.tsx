@@ -9,7 +9,7 @@ import logo from "@/assets/images/img-logo.png";
 import CircleArrowUpRight from "@/assets/icons/circle-arrow-up-right.svg";
 import HamburgerMenu from "@/assets/icons/hamburger-menu.svg";
 import { APP_NAME } from "@/constants";
-import { track } from "@vercel/analytics";
+import { trackCTAClick } from "@/lib/gtag";
 
 const Header = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -261,7 +261,7 @@ const Header = () => {
         <div ref={buttonRef} className="max-lg:hidden">
           <Button
             onClick={() => {
-              track("cta_click", { location: "header_desktop" });
+              trackCTAClick("header_desktop");
               window.open("https://app.synaulearn.com", "_blank");
             }}
             size={"lg"}

@@ -6,6 +6,7 @@ import ScrollReset from "@/components/ScrollReset";
 import { APP_NAME } from "@/constants";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: APP_NAME,
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <ReactLenis root>
         <body>
           <ScrollReset />
@@ -31,3 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
+

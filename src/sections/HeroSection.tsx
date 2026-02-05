@@ -8,7 +8,7 @@ import CloudDecorationRight from "@/assets/images/img-cloud-decoration-right.svg
 import CatDecorationLeft from "@/assets/images/img-cat-decoration-hero-left.svg";
 import CatDecorationRight from "@/assets/images/img-cat-decoration-hero-right.svg";
 import PreviewSection from "./PreviewSection";
-import { track } from "@vercel/analytics";
+import { trackCTAClick } from "@/lib/gtag";
 
 const HeroSection = () => {
   return (
@@ -25,7 +25,7 @@ const HeroSection = () => {
           </div>
           <Button
             onClick={() => {
-              track("cta_click", { location: "hero_section" });
+              trackCTAClick("hero_section");
               window.open("https://app.synaulearn.com", "_blank");
             }}
             size={"lg"}

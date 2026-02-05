@@ -11,7 +11,7 @@ import Copyright from "@/assets/icons/copyright.svg";
 import ImageCat from "@/assets/images/img-cat-decoration-footer.svg";
 import ImageMonitor from "@/assets/images/img-decoration-footer.svg";
 import { APP_NAME } from "@/constants";
-import { track } from "@vercel/analytics";
+import { trackCTAClick } from "@/lib/gtag";
 
 const FooterSection = () => {
   return (
@@ -38,7 +38,7 @@ const FooterSection = () => {
               <div className="w-1/2 flex lg:flex-col items-start max-lg:justify-end gap-5">
                 <Button
                   onClick={() => {
-                    track("cta_click", { location: "footer_section" });
+                    trackCTAClick("footer_section");
                     window.open("https://app.synaulearn.com", "_blank");
                   }}
                   size={"lg"}
