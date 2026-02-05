@@ -11,6 +11,7 @@ import Copyright from "@/assets/icons/copyright.svg";
 import ImageCat from "@/assets/images/img-cat-decoration-footer.svg";
 import ImageMonitor from "@/assets/images/img-decoration-footer.svg";
 import { APP_NAME } from "@/constants";
+import { track } from "@vercel/analytics";
 
 const FooterSection = () => {
   return (
@@ -36,9 +37,10 @@ const FooterSection = () => {
               </p>
               <div className="w-1/2 flex lg:flex-col items-start max-lg:justify-end gap-5">
                 <Button
-                  onClick={() =>
-                    window.open("https://app.synaulearn.com", "_blank")
-                  }
+                  onClick={() => {
+                    track("cta_click", { location: "footer_section" });
+                    window.open("https://app.synaulearn.com", "_blank");
+                  }}
                   size={"lg"}
                   className="w-full py-1 lg:w-3/4 lg:h-16 flex items-center max-lg:pl-3 gap-2 bg-black hover:bg-black/60 rounded-full font-extrabold text-lg justify-between"
                 >

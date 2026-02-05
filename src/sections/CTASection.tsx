@@ -10,6 +10,7 @@ import CloudRight from "@/assets/images/img-decoration-cta-right-2.svg";
 import CatCTA from "@/assets/images/img-cat-cta.svg";
 import PawLeft from "@/assets/images/img-decoration-cta-left-3.svg";
 import PawRight from "@/assets/images/img-decoration-cta-right-3.svg";
+import { track } from "@vercel/analytics";
 
 const CTASection = () => {
   return (
@@ -23,7 +24,10 @@ const CTASection = () => {
           proof you can keep
         </h3>
         <Button
-          onClick={() => window.open("https://app.synaulearn.com", "_blank")}
+          onClick={() => {
+            track("cta_click", { location: "cta_section" });
+            window.open("https://app.synaulearn.com", "_blank");
+          }}
           size={"lg"}
           className="bg-black hover:bg-black/60 font-extrabold lg:text-2xl z-50"
         >
