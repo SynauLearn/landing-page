@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import ImageCatPaw from "@/assets/images/img-decoration-footer-up.svg";
+// import ImageCatPaw from "@/assets/images/img-decoration-footer-up.svg";
 import CircleArrowUpRight from "@/assets/icons/circle-arrow-up-right.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import Instagram from "@/assets/icons/instagram.svg";
@@ -16,14 +16,14 @@ import { trackCTAClick } from "@/lib/gtag";
 const FooterSection = () => {
   return (
     <footer className="relative w-full h-screen z-10 overflow-hidden">
-      <Image
+      {/* <Image
         loading="lazy"
         src={ImageCatPaw}
         width={100}
         height={100}
         alt="Image Cat Paw"
         className="absolute top-0 left-1/2 -translate-x-1/2 w-88 max-lg:-top-10 z-10"
-      />
+      /> */}
 
       <div className="absolute bottom-0 inset-x-2 bg-sapphire-500 rounded-t-[3rem] h-[calc(100vh-8rem)] overflow-hidden">
         <div className="relative w-full flex max-lg:flex-col items-start gap-9 text-white max-lg:p-6 p-20 z-10">
