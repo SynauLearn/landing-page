@@ -7,6 +7,7 @@ import CloudDecorationLeft from "@/assets/images/img-cloud-decoration-left.svg";
 import CloudDecorationRight from "@/assets/images/img-cloud-decoration-right.svg";
 import CatDecorationLeft from "@/assets/images/img-cat-decoration-hero-left.svg";
 import CatDecorationRight from "@/assets/images/img-cat-decoration-hero-right.svg";
+import HeroGif from "@/assets/images/gif-hero.gif";
 import PreviewSection from "./PreviewSection";
 import { trackCTAClick } from "@/lib/gtag";
 
@@ -76,7 +77,23 @@ const HeroSection = () => {
         <div className="z-20 top-[calc(100vh-22rem)] absolute h-[1000px] max-lg:w-72 w-xl left-1/2 -translate-x-1/2 max-lg:rounded-[3rem] rounded-[6rem] border-20 max-lg:border-10 border-[#FAF0C3] bg-white">
           <div className="bg-white z-30 h-10 max-lg:h-6 w-76 max-lg:w-40 max-lg:rounded-b-xl rounded-b-2xl absolute top-4 left-1/2 -translate-x-1/2" />
           <div className="w-full h-full p-4 relative">
-            <div className="bg-black w-full h-full max-lg:rounded-[1.5rem] rounded-[5rem]"></div>
+            {/* 1. Wrapper acts as the mask/frame */}
+            <div className="w-full h-full relative overflow-hidden max-lg:rounded-[1.5rem] rounded-[5rem]">
+              <Image
+                src={HeroGif}
+                alt="Hero Animation"
+                fill
+                /* 
+                 * TIPS TO ADJUST:
+                 * - 'object-contain': Shows full video width (adds black bars). Change to 'object-cover' to fill height (crops sides).
+                 * - 'bg-black': Background color for empty space.
+                 * - 'scale-[1.0]': Zoom level (1.0 = 100%). Increase to zoom in.
+                 * - 'translate-y-0': Vertical position. Negative values (e.g. -translate-y-10) move it UP.
+                 */
+                className="object-contain bg-black w-full h-full scale-[1.2] -translate-y-95"
+                unoptimized
+              />
+            </div>
           </div>
         </div>
       </div>
