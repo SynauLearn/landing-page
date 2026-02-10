@@ -26,7 +26,7 @@ const CTASection = () => {
         <Button
           onClick={() => {
             trackCTAClick("cta_section");
-            window.open("https://app.synaulearn.com", "_blank");
+            window.open("https://base.app/app/app.synaulearn.com/", "_blank");
           }}
           size={"lg"}
           className="bg-black hover:bg-black/60 font-extrabold lg:text-2xl z-50"

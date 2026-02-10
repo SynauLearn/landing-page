@@ -26,7 +26,7 @@ const HeroSection = () => {
           <Button
             onClick={() => {
               trackCTAClick("hero_section");
-              window.open("https://app.synaulearn.com", "_blank");
+              window.open("https://base.app/app/app.synaulearn.com/", "_blank");
             }}
             size={"lg"}
             className="max-lg:h-12 rounded-full bg-foreground hover:bg-foreground/60 lg:text-2xl font-extrabold"

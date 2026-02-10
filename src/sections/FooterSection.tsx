@@ -39,7 +39,7 @@ const FooterSection = () => {
                 <Button
                   onClick={() => {
                     trackCTAClick("footer_section");
-                    window.open("https://app.synaulearn.com", "_blank");
+                    window.open("https://base.app/app/app.synaulearn.com/", "_blank");
                   }}
                   size={"lg"}
                   className="w-full py-1 lg:w-3/4 lg:h-16 flex items-center max-lg:pl-3 gap-2 bg-black hover:bg-black/60 rounded-full font-extrabold text-lg justify-between"
