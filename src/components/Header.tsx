@@ -262,7 +262,7 @@ const Header = () => {
           <Button
             onClick={() => {
               trackCTAClick("header_desktop");
-              window.open("https://base.app/app/app.synaulearn.com/", "_blank");
+              window.open("https://app.synaulearn.com", "_blank");
             }}
             size={"lg"}
             className="flex items-center gap-3 py-2 pl-6 rounded-full bg-foreground hover:bg-foreground/60 font-extrabold"
@@ -352,7 +352,7 @@ const Header = () => {
         {/* <div className="pb-12 px-6">
           <Button
             onClick={() => {
-              window.open("https://base.app/app/app.synaulearn.com/", "_blank");
+              window.open("https://app.synaulearn.com", "_blank");
               setIsMobileMenuOpen(false);
             }}
             size="lg"
